@@ -14,6 +14,7 @@ const companyLogos = [
   { src: "/images/logos/piramal.webp", alt: "Piramal Finance", h: "h-11" },
   { src: "/images/logos/itc.webp", alt: "ITC Limited", h: "h-14" },
   { src: "/images/logos/csir.webp", alt: "CSIR-CEERI", h: "h-14" },
+  { src: "/images/logos/bits.webp", alt: "BITS Pilani", h: "h-12" },
 ];
 
 export function Hero() {
@@ -121,19 +122,20 @@ export function Hero() {
               {/* Edge fades */}
               <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[var(--color-bg)] to-transparent z-10 pointer-events-none" />
               <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[var(--color-bg)] to-transparent z-10 pointer-events-none" />
-              <div
-                className="flex items-center gap-16 animate-marquee"
-                style={{ width: `${companyLogos.length * 2 * 200}px`, animationDuration: "20s" }}
-              >
-                {[...companyLogos, ...companyLogos].map((logo, i) => (
-                  <Image
-                    key={`${logo.alt}-${i}`}
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={180}
-                    height={60}
-                    className={`${logo.h} w-auto shrink-0 object-contain opacity-40 hover:opacity-80 transition-opacity duration-300`}
-                  />
+              <div className="flex animate-marquee" style={{ animationDuration: "25s" }}>
+                {[0, 1].map((set) => (
+                  <div key={set} className="flex shrink-0 items-center gap-16 pr-16">
+                    {companyLogos.map((logo) => (
+                      <Image
+                        key={`${logo.alt}-${set}`}
+                        src={logo.src}
+                        alt={logo.alt}
+                        width={180}
+                        height={60}
+                        className={`${logo.h} w-auto shrink-0 object-contain opacity-40 hover:opacity-80 transition-opacity duration-300`}
+                      />
+                    ))}
+                  </div>
                 ))}
               </div>
             </div>
