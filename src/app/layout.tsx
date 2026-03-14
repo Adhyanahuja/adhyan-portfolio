@@ -5,6 +5,7 @@ import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { GradientCursor } from "@/components/ui/GradientCursor";
 import { PageLoader } from "@/components/ui/PageLoader";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default function RootLayout({
         <GradientCursor />
         <SmoothScroll>{children}</SmoothScroll>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
