@@ -30,7 +30,13 @@ export function NumberCounter({
       const elapsed = (currentTime - startTime) / 1000;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      setDisplay(Math.round(eased * value));
+      const current = eased * value;
+      const decimals = (value.toString().split(".")[1] || "").length;
+      setDisplay(
+        decimals > 0
+          ? parseFloat(current.toFixed(decimals))
+          : Math.round(current)
+      );
 
       if (progress < 1) {
         requestAnimationFrame(animate);
@@ -40,10 +46,12 @@ export function NumberCounter({
     requestAnimationFrame(animate);
   }, [isInView, value, duration]);
 
+  const decimals = (value.toString().split(".")[1] || "").length;
+
   return (
     <span ref={ref} className={className}>
       {prefix}
-      {display}
+      {decimals > 0 ? display.toFixed(decimals) : display}
       {suffix}
     </span>
   );
