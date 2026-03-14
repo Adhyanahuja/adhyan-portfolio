@@ -29,11 +29,11 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Adhyan Ahuja — Builder with Purpose",
+  title: "Adhyan Ahuja | Decisions, Quantified",
   description:
     "Data Scientist at D. E. Shaw Group. Building things that matter — from ML models to teams. BITS Pilani alumnus combining technical depth with business impact.",
   openGraph: {
-    title: "Adhyan Ahuja — Builder with Purpose",
+    title: "Adhyan Ahuja | Decisions, Quantified",
     description:
       "Data Scientist at D. E. Shaw Group. Building things that matter — from ML models to teams.",
     type: "website",
