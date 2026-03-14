@@ -22,6 +22,22 @@ export function Footer() {
           >
             GitHub
           </a>
+          <a
+            href="https://scholar.google.com/citations?hl=en&user=Qp3ky74AAAAJ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-[var(--color-tertiary)] hover:text-[var(--color-accent)] transition-colors"
+          >
+            Google Scholar
+          </a>
+          <a
+            href="https://www.instagram.com/adhyan_ahuja_10"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-[var(--color-tertiary)] hover:text-[var(--color-accent)] transition-colors"
+          >
+            Instagram
+          </a>
         </div>
       </div>
     </footer>
