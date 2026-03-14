@@ -15,7 +15,7 @@ const interests = [
 ];
 
 const moments = Array.from(
-  { length: 15 },
+  { length: 16 },
   (_, i) => `/images/moments/moment-${i + 1}.webp`
 );
 
