@@ -122,7 +122,10 @@ export function Hero() {
               {/* Edge fades */}
               <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[var(--color-bg)] to-transparent z-10 pointer-events-none" />
               <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[var(--color-bg)] to-transparent z-10 pointer-events-none" />
-              <div className="flex animate-marquee" style={{ animationDuration: "25s" }}>
+              <div
+                className="flex w-max animate-marquee will-change-transform"
+                style={{ animationDuration: "25s" }}
+              >
                 {[0, 1].map((set) => (
                   <div key={set} className="flex shrink-0 items-center gap-16 pr-16">
                     {companyLogos.map((logo) => (
